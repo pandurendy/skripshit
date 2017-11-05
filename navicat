@@ -1,0 +1,33 @@
+SELECT
+a.id
+a.kode_order,
+a.tgl_order,
+a.nama_proyek,
+a.kode_customer,
+b.nama_customer,
+b.alamat_customer,
+c.nama_sales,
+c.alamat_sales,
+a.alamat_proyek,
+a.kode_sales;
+FORM
+tabel_order AS a
+LEFT JOIN tabel_customer AS b ON a.kode_customer = b.kode_customer
+LEFT JOIN tabel_sales AS c ON a.kode_sales = c.kode_sales
+
+SELECT
+a.id,
+a.kode_order,
+a.tgl_order,
+a.nama_proyek,
+a.kode_customer,
+b.nama_customer,
+b.alamat_customer,
+c.nama_sales,
+c.alamat_sales,
+a.alamat_proyek,
+a.kode_sales
+FROM
+tabel_order AS a
+LEFT JOIN tabel_customer AS b ON a.kode_customer = b.kode_customer
+LEFT JOIN tabel_sales AS c ON a.kode_sales = c.kode_sales 
